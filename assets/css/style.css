@@ -1,0 +1,54 @@
+
+.movieCard {
+	
+	overflow:hidden;
+	height:350px;
+	position:relative;
+	
+}
+
+.movieCard img{
+	
+	width:100%;
+	height:100%;
+	object-fit:cover;
+}
+
+.titleInfo {
+	
+	position:absolute;
+	left:0;
+	bottom:0;
+	width:100%;
+	background-color:#936c6c;
+	color:white;
+	padding:10px;
+	
+}
+
+.overview {
+	
+	position:absolute;
+	left:0;
+	top:30%;
+	height:70%;
+	background-color:white;
+	width:100%;
+	transform:translateY(100%);
+	opacity:0;
+	transition:all 0.5s linear;
+	
+}
+
+.movieCard:is(:hover, :active, :focus) .overview{
+	
+	transform:translateY(0%);
+	opacity:1;
+}
+
+.titleInfo h3 {
+	
+	overflow:hidden;
+	text-overflow:ellipsis;
+	white-space:nowrap;
+}
